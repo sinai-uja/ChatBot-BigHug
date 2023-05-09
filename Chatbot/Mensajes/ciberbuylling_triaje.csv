@@ -1,0 +1,25 @@
+Texto del mensaje,Aplica a sano,Aplica a indicada,
+"He notado que desde hace unas semanas en mi grupo de amigos están haciendo quedadas y no me avisan nunca cuando antes siempre lo hacían ¿por qué crees que están haciendo eso?
+",x,,
+He notado que desde hace unas semanas en mi grupo de amigos están haciendo quedadas y no me avisan nunca cuando antes siempre lo hacían ¿Qué tipo de cosas te han hecho a ti?,,x,
+"Cuando alguien nos hace sentir mal a propósito se desatan sensaciones y pensamientos horribles,¿cómo te sentías tú cuando alguien te hacía sentir mal a propósito?",,x,
+"He notado que cuando digo algo en el grupo de whatsapp nadie me contesta, aunque lo repita varias veces, ¿qué harías tú en esta situación?
+",x,,
+"En algunas ocasiones intento hacer algo para que todo esto pare, ¡no quiero que sigan molestándome! ¿Qué cosas has hecho tú para frenar esta situación?",,x,
+"El otro día me llegó un direct de instagram de una cuenta que no sigo, me dieron ganas de llorar porque solo me insultaba, ¿por qué crees que me está pasando esto?
+",x,,
+"Aunque los insultos me duelen bastante, lo que más miedo me da son las amenazas… Ya me han llegado mensajes de cuentas distintas de instagram diciendo que me van a hacer cosas terribles… ¿Cómo piensas que afecta eso a mi vida cotidiana?
+",x,,
+"Aunque los insultos me duelen bastante, lo que más miedo me da son las amenazas… Ya me han llegado mensajes de cuentas distintas de instagram diciendo que me van a hacer cosas terribles… ¿Cómo piensas que afecta eso a tu vida cotidiana?
+",,x,
+"No tengo ganas de nada, no quiero ir al instituto. Creo que mis amigos de siempre me odian y no sé qué he hecho tan malo como para que me traten así. Quiero que acabe ya está situación. ¿Cómo podría volver a estar bien?
+",x,,
+"Aunque a veces me cueste un poco, intento hacer cosas que me hagan sentir mejor como escuchar música o jugar un rato con mi perro, ¿qué cosas haces tú para sentirte mejor?",,x,
+"Me gustaría pedir ayuda pero solo pensarlo me hace sentir fatal, tienen algunas fotos comprometidas de cuando fuimos de excursión y estaba haciendo el tonto con mis amigos. Me da mucho miedo que se las enseñen a alguien de mi familia o a los profesores… ¿Qué harías tú en mi situación?
+",x,,
+A mi me resulta difícil contarle a alguien lo que me ocurre... puedo sentir miedo o vergüenza... ¿cómo pedirías ayuda tú?,,x,
+"Una vez intenté contarle a alguien todo lo que me estaba pasando, pero creo que no me entendió del todo... No me sentí escuchadx, ¿qué crees que debería hacer a la hora de pedir ayuda para que no me pase eso?",x,x,
+"Sé que las fotos en las que salgo ya las han compartido entre mis amigos, han hecho memes y les han llegado a mucha gente del instituto… No tengo ganas de ir a clase cuando me despierto. ¿Cómo le contarías a alguien que te está pasando algo así?
+",x,,
+Es complicado encontrar el momento y la persona adecuada para hablar de algo que te hace sentir mal. A veces estaba tan triste por lo que había pasado que no tenía ganas de hacer otras cosas… Incluso llegué a pensar en desaparecer para siempre. ¿Te ha pasado algo parecido?,,x,SI DICE SI-> ALERTA
+¿Has llegado a intentarlo?,,x,
