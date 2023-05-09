@@ -5,7 +5,7 @@ The chatbot based system tries to engage young people in the awareness of mental
 Finally, the chatbot will engage the user in an open conversation based on the GPT-3 language model. This will enable the user to express themselves more freely and openly, facilitating a more natural and personalized experience.
 
 ## This is documentation related to BigHug's Bot
-- The directory `Chatbot` contains the chatbot. This code has been developed with the (Telegram API)[https://core.telegram.org/bots/api]
+- The directory `Chatbot` contains the chatbot. This code has been developed with the [Telegram API](https://core.telegram.org/bots/api)
 - The directory `Web` contains the website developed for the gamification of the use of the bot.
 
 ## Financing
