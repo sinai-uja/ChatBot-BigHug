@@ -3,49 +3,50 @@ keyboard_sino = InlineKeyboardMarkup([[InlineKeyboardButton("Sí", callback_data
 keyboard_rango = InlineKeyboardMarkup([[InlineKeyboardButton("0", callback_data='cb_0'), InlineKeyboardButton("1", callback_data='cb_1'),InlineKeyboardButton("2", callback_data='cb_2'), InlineKeyboardButton("3", callback_data='cb_3'),InlineKeyboardButton("4", callback_data='cb_4')],[InlineKeyboardButton("5", callback_data='cb_5'),InlineKeyboardButton("6", callback_data='cb_6'), InlineKeyboardButton("7", callback_data='cb_7'),InlineKeyboardButton("8", callback_data='cb_8')]])
 
 #################################### 
-## Datos de Telegram
-# Nombre del bot: Big Hug
-# Alias del bot (debe acabar en '_Bot' y no existir): Big_Hug_Bot
-# Descripción (aparece antes de pulsar '/start'): Hola, soy BigHug, una inteligencia artificial que quiere aprender. He sido creado por un grupo de investigadores. Habla conmigo para ayudarme a descubrir cosas nuevas. Si necesitas más información sobre mi la puedes encontrar en la web https://bighug.ujaen.es/
-# Imagen: Bot con fondo azul (libre de derechos)
-# Biografía (aparece en el perfil de usuario): Soy un bot que quiere aprender cosas nuevas. Habla conmigo para ayudarme!
+## Telegram data
+# Bot name: Big Hug
+# Bot alias (must end with '_Bot'): Big_Hug_Bot
+# Description (it appears before pressing '/start'): Hola, soy BigHug, una inteligencia artificial que quiere aprender. He sido creado por un grupo de investigadores. Habla conmigo para ayudarme a descubrir cosas nuevas. Si necesitas más información sobre mi la puedes encontrar en la web https://bighug.ujaen.es/
+# Image: Bot con fondo azul (libre de derechos)
+# Biography (appears in the user profile): Soy un bot que quiere aprender cosas nuevas. Habla conmigo para ayudarme!
 
 ##################################### 
 ## CLASS USER
 class User:
     def __init__(self, name):
-        self.name = name            # Nombre de usuario en telegram
+        self.name = name            # Telegram username
         self.alias = ""             # Alias BigHug
-        self.age = ""               # Edad
-        self.sex = ""               # Sexo 
-        self.text = ""              # Conversacion (prompt)
-        self.bot = ""               # Bot elegido
-        self.iniciado = False       # Si ha comenzado o no a conversar con OpenAI
-        self.monosilabos = 0        # Cantidad de veces seguidas que responde con pocas letras
-        self.patologia = -1         # Patología sobre la que se está conversando
-        self.triaje_cont = 0        # Contador sobre la pregunta de triaje en la que nos situamos
-        self.response = ""          # Respuestas del triaje del usuario para evaluarlo
-        self.response_oficial = ""  # Respuestas del triaje del usuario para almacenar
-        self.iteraciones = 0        # Cambio de pregunta cada 5 respuestas del usuario
-        self.iteraciones_trast = 0  # Cambio de trastorno cada 50 respuestas del usuario
-        self.bateria = None         # Lista con las preguntas de la bateria de una patologia
-        self.preg_bateria = ""      # Pregunta actual de la batería sobre la que estan hablando
-        self.colamsgs = []          # Cola de mensajes seguidos que ha enviado el usuario
+        self.age = ""               # Age
+        self.sex = ""               # Sex
+        self.text = ""              # Conversation (prompt)
+        self.bot = ""               # Bot selected
+        self.iniciado = False       # Whether or not they have started talking to OpenAI
+        self.monosilabos = 0        # Number of times in a short period that they answer with few letters
+        self.patologia = -1         # Pathology being discussed
+        self.triaje_cont = 0        # Counter on the triage question at hand
+        self.response = ""          # User triage responses to assess the user
+        self.response_oficial = ""  # User triage responses to store
+        self.iteraciones = 0        # Change of question every 5 user answers
+        self.iteraciones_trast = 0  # Change of disorder every 50 user responses
+        self.bateria = None         # List of questions from a pathology battery
+        self.preg_bateria = ""      # Current question on the battery you are talking about
+        self.colamsgs = []          # Queue of consecutive messages sent by the user
 
-## CONSTANTES
-MAX_PATOLOGIAS = 12     # De la 0 a la 12, siendo agorafobia la 13 (total = 14) - Excluyo agorafobia ya que siempre se ejecuta después de ataques de pánico
-MIN_IT_TEMA = 50        # Mínimo número de iteraciones del usuario para cambiar de patología
-MIN_IT_PREG = 5         # Mínimo número de iteraciones del usuario para cambiar de pregunta de la batería
-MAX_MONOSILABOS = 4     # Máxmino número de mensajes seguidos con monosilabos para enviar el mensaje 
-## DICCIONARIOS relativos al género
+## CONSTANTS
+MAX_PATOLOGIAS = 12     # 0 to 12, agoraphobia being 13 (total = 14) - I exclude agoraphobia as it always occurs after panic attacks.
+MIN_IT_TEMA = 50        # Minimum number of user iterations to change pathology
+MIN_IT_PREG = 5         # Minimum number of user iterations to change battery question
+MAX_MONOSILABOS = 4     # Maximum number of consecutive messages with monosyllables to send message 
+
+## gender-related DICTIONARIES
 genero_dict = {'Femenino':'girl','Masculino':'boy'}
 gender_dict = {'Ada':'girl','Hugo':'boy','Big':'non binary'}
 adj_pos_dict = {'Ada':'her','Hugo':'his','Big':'its'}
 es_genero_dict = {'Ada':'a','Hugo':'o','Big':'x'}
 es_genero_dict2 = {'Femenino':'a','Masculino':'o'}
 
-## LISTAS
-# Lista con preguntas relativas al suicidio
+## LISTS
+# Checklist of questions relating to suicide
 suicidio_list = ['En algunas ocasiones me he puesto tan mal pensando que las cosas nunca mejorarán que he llegado a pensar que preferiría no despertarme… ¿Alguna vez has pensado algo parecido?','Es complicado encontrar el momento y la persona adecuada para hablar de algo que te hace sentir mal. A veces estaba tan triste por lo que había pasado que no tenía ganas de hacer otras cosas… Incluso llegué a pensar en desaparecer para siempre. ¿Te ha pasado algo parecido?','Es que a veces esta situación puede hacerte perder un poco la esperanza o las ganas, ¿cómo te hace ver la vida todo esto?']
 # Lista de mensajes que afirman riesgo al suicidio
 suicidio_resp_list = ['si','sí','claro','veces','según','menudo','mucho','días','dias','parecido','totalmente','obvio','vaya','supuesto','poco','vez','ocasiones','puede','mal','muy','fatal','morir']
